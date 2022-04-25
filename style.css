@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Source+Sans+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--second-color)
+}
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+i{
+    font-size: 144px;
+}
+:root{
+    --main-color: #252525;
+    --second-color: #88dade;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    height: 3.2rem ;
+    background-color: var(--main-color);
+    
+}
+.navigation li{
+    padding-right: 15px;
+    margin: 10px 0;
+    list-style: none;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:var(--second-color);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+.main{
+    height: calc(100vh - 3.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main h1{
+    margin-top: 5vw;
+    
+}
+.main h2{
+    color: var(--main-color);
+    margin-top: 1vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+.me-img{
+    margin-top: 5vw;
+    height: 200px;
+}
+.me-img > img {
+    height: 100%;
+}
+
+
+
+.projects{
+    background-color: var(--main-color);
+    color: #fff;
+    height: 75vh;
+    text-align: center;
+    padding-top: 1vw;
+}
+.projects>.projects-wrapper{
+    /* margin-top: 10vw; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+.project{
+    flex-basis: 30%;
+}
+.project h2{
+    margin-bottom: 5px;
+}
+.project a{
+    padding: 3px 15px;
+    transition: .3s;
+}
+.project a:hover{
+    background-color: var(--second-color);
+    color: #fff;
+    border-radius: 100px;
+}
+.project-image img {
+    width: 316px;
+    height: 160px;
+    border-radius: 15px;
+}
+
+
+
+
+
+.skills{
+    height: 75vh;
+    text-align: center;
+    padding-top: 1vw;
+}
+.skills-wrapper{
+    margin-top: 2.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content:space-around;
+}
+.skill {
+    flex-basis: 25%;
+    margin-bottom: 1vw;
+}
+.skill h2{
+    margin-top: 1vw;
+}
+.skill i {
+    color: var(--main-color);
+    transition: .3s;
+}
+.skill i:hover{
+    color: var(--second-color);
+    transform: scale(1.2);
+}
+
+.contact{
+    height: 50vh;
+    padding: 1vw 0;
+    background-color: var(--main-color);
+    text-align: center;
+}
+.contacts-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.single-contact{
+    flex-basis: 30%;
+    color: #fff;
+}
+.single-contact i {
+    color: #fff;
+    margin-top: 1vw;
+}
+.fa-github{
+    transition: .3s;
+}
+.fa-github:hover{
+    color: var(--second-color)
+}
