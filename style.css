@@ -100,7 +100,6 @@ a{
     padding-top: 1vw;
 }
 .projects>.projects-wrapper{
-    /* margin-top: 10vw; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -121,8 +120,11 @@ a{
     color: #fff;
     border-radius: 100px;
 }
+.project-image{
+    width: 100%;
+}
 .project-image img {
-    width: 316px;
+    width: 100%;
     height: 160px;
     border-radius: 15px;
 }
@@ -138,6 +140,7 @@ a{
 }
 .skills-wrapper{
     margin-top: 2.5vw;
+    height: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -189,4 +192,60 @@ a{
     position: fixed;
     justify-content: center;
     background-color: rgba(37, 37, 37, .8)
+}
+
+
+@media (max-width:590px){
+    .main p {
+        padding:0 10%;
+    }
+    .navigation{
+        font-size: 1.2rem;
+    }
+    i {
+        font-size: 100px
+    }
+    .projects{
+        height: auto;
+    }
+    .project{
+        flex-basis: 50%;
+        margin-bottom: 1rem;
+    }
+    .project-image img{
+        width: 80vw;
+    }
+    .projects>.projects-wrapper{
+        flex-direction: column;
+    }
+}
+@media (max-width:485px){
+    i{
+        font-size: 64px;
+    }
+    .main .name h1{
+        font-size: 24px;
+    }
+    .main .name h2{
+        font-size: 20px;
+    }
+    .main p{
+        font-size: 18px;
+    }
+    .navigation{
+        font-size: 1rem;
+    }
+    .contacts-wrapper{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .single-contact h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:420px){
+    .navigation{
+        font-size: 0.75rem;
+    }
 }

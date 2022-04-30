@@ -2,3 +2,4 @@
 
 - Dark mode
 - EN/PL language switch button
+- mobile 
