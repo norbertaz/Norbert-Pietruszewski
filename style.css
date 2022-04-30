@@ -163,7 +163,8 @@ a{
 }
 
 .contact{
-    height: 50vh;
+    min-height: 50vh;
+    height: auto;
     padding: 1vw 0;
     background-color: var(--main-color);
     text-align: center;
@@ -236,7 +237,7 @@ a{
         font-size: 1rem;
     }
     .contacts-wrapper{
-        height: 100%;
+        min-height: 50vh;
         flex-direction: column;
         justify-content: space-between;
     }
