@@ -23,6 +23,7 @@ a{
     color:var(--second-color);
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    
 }
 
 :root{
@@ -39,19 +40,40 @@ a{
     height: 3.2rem ;
     width: 100%;
     background-color: var(--main-color);
+    transition: .3s;
 }
 .navigation li{
-    padding-right: 15px;
+    padding: 0 15px;
     margin: 10px 0;
     list-style: none;
     text-align: center;
+    border-radius: 25px;
+
+
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
 }
+.navigation li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #88DADE;
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+  }
+
 .navigation li a {
     transition: .3s;
 }
 .navigation li a:hover {
-    font-size: 26px;
-    color: #fff
+    font-size: 32px;
+    color: #fff;
+    text-decoration-color: rgba(0, 0, 0, 1);
 }
 
 
@@ -164,14 +186,16 @@ a{
 
 .contact{
     min-height: 50vh;
-    height: auto;
+    height: 50vh;
     padding: 1vw 0;
     background-color: var(--main-color);
     text-align: center;
 }
 .contacts-wrapper{
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 .single-contact{
@@ -190,10 +214,21 @@ a{
 }
 
 .scroll{
+    transition: .3;
+    z-index: 1;
     position: fixed;
     justify-content: center;
-    background-color: rgba(37, 37, 37, .8)
+    background-color: rgba(37, 37, 37, .8);
 }
+
+
+  .navigation li.active:after{
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+    /* background-color: #fff;
+    transition: .3s; */
+
 
 
 @media (max-width:590px){
@@ -201,6 +236,9 @@ a{
         padding:0 10%;
     }
     .navigation{
+        font-size: 1.2rem;
+    }
+    .navigation li a:hover {
         font-size: 1.2rem;
     }
     i {
@@ -219,6 +257,11 @@ a{
     .projects>.projects-wrapper{
         flex-direction: column;
     }
+    .contacts-wrapper{
+        min-height: 50vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
 @media (max-width:485px){
     i{
@@ -236,17 +279,19 @@ a{
     .navigation{
         font-size: 1rem;
     }
-    .contacts-wrapper{
-        min-height: 50vh;
-        flex-direction: column;
-        justify-content: space-between;
+    .navigation li a:hover {
+        font-size: 1rem;
     }
+    
     .single-contact h2{
         font-size: 20px;
     }
 }
 @media (max-width:420px){
     .navigation{
+        font-size: 0.65rem;
+    }
+    .navigation li a:hover {
         font-size: 0.75rem;
     }
 }
